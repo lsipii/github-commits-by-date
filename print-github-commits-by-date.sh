@@ -19,8 +19,8 @@ print_commits() {
     local SINCE="${DATE}T00:00:00Z"
     local UNTIL="${DATE}T23:59:59Z"
 
-    #local REPOSITORIES=$(gh api -H "Accept: application/vnd.github+json" "/users/${OWNER}/repos" | jq -r '.[].name')
-    local REPOSITORIES=$(curl -s \
+    #REPOSITORIES=$(gh api -H "Accept: application/vnd.github+json" "/users/${OWNER}/repos" | jq -r '.[].name')
+    REPOSITORIES=$(curl -s \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer ${GITHUB_API_TOKEN}"\
         -H "X-GitHub-Api-Version: 2022-11-28" \
