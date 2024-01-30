@@ -5,6 +5,7 @@ set -e
 print_usage() {
     echo "Usage: $0 [options]"
     echo "Requirements: set local environment variable GITHUB_API_TOKEN to your GitHub API token: https://docs.github.com/en/rest/overview/other-authentication-methods#via-oauth-tokens"
+    echo "    The token should not require any priviledges, with private repositories allow the `repo`-flag (not tested)."
     echo "Options:"
     echo "  -h, --help"
     echo "  -o, --owner <repository owner>"
